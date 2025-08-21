@@ -1,0 +1,153 @@
+● goliat
+    State: degraded
+    Units: 396 loaded (incl. loaded aliases)
+     Jobs: 0 queued
+   Failed: 1 units
+    Since: Thu 2025-08-21 11:27:43 UTC; 56min ago
+  systemd: 257.7-1
+  Tainted: unmerged-bin
+   CGroup: /
+           ├─init.scope
+           │ └─1 /sbin/init
+           ├─system.slice
+           │ ├─ModemManager.service
+           │ │ └─985 /usr/sbin/ModemManager
+           │ ├─NetworkManager.service
+           │ │ └─967 /usr/sbin/NetworkManager --no-daemon
+           │ ├─accounts-daemon.service
+           │ │ └─799 /usr/libexec/accounts-daemon
+           │ ├─avahi-daemon.service
+           │ │ ├─802 "avahi-daemon: running [goliat.local]"
+           │ │ └─823 "avahi-daemon: chroot helper"
+           │ ├─colord.service
+           │ │ └─1167 /usr/libexec/colord
+           │ ├─cpupower-gui-helper.service
+           │ │ └─1010 /usr/bin/python3 /usr/lib/x86_64-linux-gnu/cpupower-gui/cpupower-gui-helper
+           │ ├─cron.service
+           │ │ └─807 /usr/sbin/cron -f
+           │ ├─cups-browsed.service
+           │ │ └─1156 /usr/sbin/cups-browsed
+           │ ├─cups.service
+           │ │ ├─1020 /usr/sbin/cupsd -l
+           │ │ ├─1041 /usr/lib/cups/notifier/dbus dbus://
+           │ │ ├─1042 /usr/lib/cups/notifier/dbus dbus://
+           │ │ ├─1043 /usr/lib/cups/notifier/dbus dbus://
+           │ │ ├─1044 /usr/lib/cups/notifier/dbus dbus://
+           │ │ └─1166 /usr/lib/cups/notifier/dbus dbus://
+           │ ├─dbus.service
+           │ │ └─810 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+           │ ├─lightdm.service
+           │ │ ├─1027 /usr/sbin/lightdm
+           │ │ └─1038 /usr/lib/xorg/Xorg :0 -seat seat0 -auth /var/run/lightdm/root/:0 -nolisten tcp vt7 -novtswitch
+           │ ├─polkit.service
+           │ │ └─862 /usr/lib/polkit-1/polkitd --no-debug --log-level=notice
+           │ ├─rtkit-daemon.service
+           │ │ └─1088 /usr/libexec/rtkit-daemon
+           │ ├─smartmontools.service
+           │ │ └─890 /usr/sbin/smartd -n
+           │ ├─system-getty.slice
+           │ │ └─getty@tty1.service
+           │ │   └─1040 /sbin/agetty -o "-- \\u" --noreset --noclear - linux
+           │ ├─systemd-journald.service
+           │ │ └─368 /usr/lib/systemd/systemd-journald
+           │ ├─systemd-logind.service
+           │ │ └─894 /usr/lib/systemd/systemd-logind
+           │ ├─systemd-udevd.service
+           │ │ └─udev
+           │ │   └─418 /usr/lib/systemd/systemd-udevd
+           │ ├─udisks2.service
+           │ │ └─896 /usr/libexec/udisks2/udisksd
+           │ ├─upower.service
+           │ │ └─1536 /usr/libexec/upowerd
+           │ ├─watchdog.service
+           │ │ └─1161 /usr/sbin/watchdog
+           │ └─wpa_supplicant.service
+           │   └─968 /usr/sbin/wpa_supplicant -u -s -O "DIR=/run/wpa_supplicant GROUP=netdev"
+           └─user.slice
+             └─user-1000.slice
+               ├─session-3.scope
+               │ ├─1193 lightdm --session-child 13 24
+               │ ├─1236 xfce4-session
+               │ ├─1301 /usr/bin/ssh-agent /usr/bin/im-launch x-session-manager
+               │ ├─1318 /usr/bin/ibus-daemon --daemonize --xim
+               │ ├─1340 /usr/libexec/ibus-dconf
+               │ ├─1341 /usr/libexec/ibus-ui-gtk3
+               │ ├─1342 /usr/libexec/ibus-extension-gtk3
+               │ ├─1344 /usr/libexec/ibus-x11 --kill-daemon
+               │ ├─1406 /usr/libexec/ibus-engine-simple
+               │ ├─1418 xfwm4
+               │ ├─1447 xfsettingsd
+               │ ├─1456 xfce4-panel
+               │ ├─1461 Thunar --daemon
+               │ ├─1467 xfdesktop
+               │ ├─1471 psensor
+               │ ├─1472 /usr/libexec/geoclue-2.0/demos/agent
+               │ ├─1475 light-locker
+               │ ├─1480 nm-applet
+               │ ├─1481 /usr/bin/python3 /usr/share/system-config-printer/applet.py
+               │ ├─1489 xfce4-power-manager
+               │ ├─1492 xiccd
+               │ ├─1496 /usr/libexec/polkit-mate-authentication-agent-1
+               │ ├─1578 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libsystray.so 6 25165836 systray "Status Tray Plugin" "Provides status notifier items (application indicators) and legacy systray items"
+               │ ├─1588 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libactions.so 10 25165837 actions "Action Buttons" "Log out, lock or other system actions"
+               │ ├─1660 xfce4-terminal
+               │ ├─1672 bash
+               │ ├─1682 bash
+               │ ├─1703 /bin/sh /usr/bin/sensible-browser
+               │ ├─1704 x-www-browser
+               │ ├─1764 /usr/lib/firefox-esr/firefox-esr -contentproc -parentBuildID 20250714124554 -prefsLen 31122 -prefMapSize 249642 -appDir /usr/lib/firefox-esr/browser {178a8b2e-dc4a-41fc-88c4-639d710a5961} 1704 true socket
+               │ ├─1794 /usr/lib/firefox-esr/firefox-esr -contentproc -childID 1 -isForBrowser -prefsLen 31198 -prefMapSize 249642 -jsInitLen 234912 -parentBuildID 20250714124554 -greomni /usr/lib/firefox-esr/omni.ja -appomni /usr/lib/firefox-esr/browser/omni.ja -appDir /usr/lib/firefox-esr/browser {8ed67208-7846-4d79-b81c-4b61ad13e97e} 1704 true tab
+               │ ├─1841 /usr/lib/firefox-esr/firefox-esr -contentproc -childID 2 -isForBrowser -prefsLen 37041 -prefMapSize 249642 -jsInitLen 234912 -parentBuildID 20250714124554 -greomni /usr/lib/firefox-esr/omni.ja -appomni /usr/lib/firefox-esr/browser/omni.ja -appDir /usr/lib/firefox-esr/browser {35ca0ec8-3067-48e5-9942-31a7e766c7ed} 1704 true tab
+               │ ├─1886 /usr/lib/firefox-esr/firefox-esr -contentproc -parentBuildID 20250714124554 -sandboxingKind 0 -prefsLen 37082 -prefMapSize 249642 -appDir /usr/lib/firefox-esr/browser {2c8e9fb3-7148-4a36-815e-3c852e604697} 1704 true utility
+               │ ├─2110 /usr/lib/firefox-esr/firefox-esr -contentproc -parentBuildID 20250714124554 -prefsLen 37104 -prefMapSize 249642 -appDir /usr/lib/firefox-esr/browser {e7d95556-73fc-4e34-8dcd-d3b4d460cd4c} 1704 true rdd
+               │ ├─2129 /usr/lib/firefox-esr/firefox-esr -contentproc -childID 8 -isForBrowser -prefsLen 33304 -prefMapSize 249642 -jsInitLen 234912 -parentBuildID 20250714124554 -greomni /usr/lib/firefox-esr/omni.ja -appomni /usr/lib/firefox-esr/browser/omni.ja -appDir /usr/lib/firefox-esr/browser {9f82cacb-b203-4cc9-8178-20c0021a4b1f} 1704 true tab
+               │ ├─2261 /usr/lib/firefox-esr/firefox-esr -contentproc -childID 9 -isForBrowser -prefsLen 33304 -prefMapSize 249642 -jsInitLen 234912 -parentBuildID 20250714124554 -greomni /usr/lib/firefox-esr/omni.ja -appomni /usr/lib/firefox-esr/browser/omni.ja -appDir /usr/lib/firefox-esr/browser {79a0ab6a-fe58-4fb7-b91d-37de7494b1d5} 1704 true tab
+               │ ├─2793 /usr/lib/firefox-esr/firefox-esr -contentproc -childID 14 -isForBrowser -prefsLen 33304 -prefMapSize 249642 -jsInitLen 234912 -parentBuildID 20250714124554 -greomni /usr/lib/firefox-esr/omni.ja -appomni /usr/lib/firefox-esr/browser/omni.ja -appDir /usr/lib/firefox-esr/browser {9d22c254-472d-4dbe-b868-f9e127fbe28a} 1704 true tab
+               │ ├─3787 /usr/lib/firefox-esr/firefox-esr -contentproc -childID 16 -isForBrowser -prefsLen 33304 -prefMapSize 249642 -jsInitLen 234912 -parentBuildID 20250714124554 -greomni /usr/lib/firefox-esr/omni.ja -appomni /usr/lib/firefox-esr/browser/omni.ja -appDir /usr/lib/firefox-esr/browser {f1eea200-34ef-4d99-bd17-4d416ac2a1c5} 1704 true tab
+               │ ├─4004 /usr/lib/firefox-esr/firefox-esr -contentproc -childID 17 -isForBrowser -prefsLen 33304 -prefMapSize 249642 -jsInitLen 234912 -parentBuildID 20250714124554 -greomni /usr/lib/firefox-esr/omni.ja -appomni /usr/lib/firefox-esr/browser/omni.ja -appDir /usr/lib/firefox-esr/browser {f80a0ed9-ce79-4645-ad30-c24a217d1371} 1704 true tab
+               │ ├─4038 /usr/lib/firefox-esr/firefox-esr -contentproc -childID 18 -isForBrowser -prefsLen 33304 -prefMapSize 249642 -jsInitLen 234912 -parentBuildID 20250714124554 -greomni /usr/lib/firefox-esr/omni.ja -appomni /usr/lib/firefox-esr/browser/omni.ja -appDir /usr/lib/firefox-esr/browser {906386aa-464d-4c4e-b8b8-226af5e6b554} 1704 true tab
+               │ ├─4121 sudo systemctl status
+               │ ├─4123 sudo systemctl status
+               │ └─4124 systemctl status
+               └─user@1000.service
+                 ├─app.slice
+                 │ ├─dconf.service
+                 │ │ └─1452 /usr/libexec/dconf-service
+                 │ ├─gnome-keyring-daemon.service
+                 │ │ └─1229 /usr/bin/gnome-keyring-daemon --foreground --components=pkcs11,secrets --control-directory=/run/user/1000/keyring
+                 │ ├─gpg-agent.service
+                 │ │ └─1411 /usr/bin/gpg-agent --supervised
+                 │ ├─mpris-proxy.service
+                 │ │ └─1226 /usr/bin/mpris-proxy
+                 │ ├─xdg-desktop-portal-gtk.service
+                 │ │ └─1430 /usr/libexec/xdg-desktop-portal-gtk
+                 │ └─xfce4-notifyd.service
+                 │   └─1490 /usr/lib/x86_64-linux-gnu/xfce4/notifyd/xfce4-notifyd
+                 ├─init.scope
+                 │ ├─1204 /usr/lib/systemd/systemd --user
+                 │ └─1206 "(sd-pam)"
+                 └─session.slice
+                   ├─at-spi-dbus-bus.service
+                   │ ├─1358 /usr/libexec/at-spi-bus-launcher
+                   │ ├─1366 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 11 --address=unix:path=/run/user/1000/at-spi/bus_0
+                   │ └─1379 /usr/libexec/at-spi2-registryd --use-gnome-session
+                   ├─dbus.service
+                   │ ├─1230 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+                   │ └─1348 /usr/libexec/ibus-portal
+                   ├─gvfs-daemon.service
+                   │ ├─1332 /usr/libexec/gvfsd
+                   │ ├─1621 /usr/libexec/gvfsd-trash --spawner :1.11 /org/gtk/gvfs/exec_spaw/0
+                   │ └─2875 /usr/libexec/gvfsd-computer --spawner :1.11 /org/gtk/gvfs/exec_spaw/1
+                   ├─gvfs-metadata.service
+                   │ └─1617 /usr/libexec/gvfsd-metadata
+                   ├─gvfs-udisks2-volume-monitor.service
+                   │ └─1596 /usr/libexec/gvfs-udisks2-volume-monitor
+                   ├─pulseaudio.service
+                   │ └─1227 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+                   ├─xdg-desktop-portal.service
+                   │ └─1384 /usr/libexec/xdg-desktop-portal
+                   ├─xdg-document-portal.service
+                   │ ├─1404 /usr/libexec/xdg-document-portal
+                   │ └─1424 fusermount3 -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal -- /run/user/1000/doc
+                   └─xdg-permission-store.service
+                     └─1395 /usr/libexec/xdg-permission-store

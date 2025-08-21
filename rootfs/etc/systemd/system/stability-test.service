@@ -1,0 +1,10 @@
+[Unit]
+Description=Overnight CPU and VRM Stability Test
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/overnight_test.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "Applying custom P-State configuration..."
+
+# Apply settings to all 4 cores (0, 1, 2, 3)
+for core in {0..3}
+do
+  # P0 State: 4.5 GHz @ 1.35V
+  $MSR_TOOL --pstate=0 --fid=29 --vid=16 --cpu=$core
+  
+  # P1 State: 4.0 GHz @ 1.30V
+  $MSR_TOOL --pstate=1 --fid=24 --vid=20 --cpu=$core
+done
+
+echo "Custom P-States applied."

@@ -7,6 +7,8 @@ MSR_TOOL="/usr/local/sbin/amdmsrt"
 
 echo "Applying custom P-State configuration..."
 
+# All CPU P-states are with LLC
+
 # AMD Turbo CORE P-states
 # P0 state (single thread): 4.7 GHz @ 1.3875V
 # P1 state (multi thread) : 4.5 GHz @ 1.3500V
@@ -26,5 +28,8 @@ $MSR_TOOL P2=18.0@1.3000 P3=16.5@1.2250
 # P5 state: 1.7 GHz @ 1.000mV
 $MSR_TOOL P4=12.5@1.1000 P5=8.5@1.000
 
+# Northbridge
+# P0 state: 2.0 GHz @ 1.1500mV with LLC
+$MSR_TOOL NB_P0=10@1.1500
 
 echo "Custom P-States applied."

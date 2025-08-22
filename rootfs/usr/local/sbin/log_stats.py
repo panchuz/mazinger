@@ -1,12 +1,21 @@
 #!/usr/bin/env python3
 import subprocess, time, re, sys
 
-LOG_FILE = "/var/log/stability_test/sensor_log.csv"
-INTERVAL_S = 2 # Log every 2 seconds to keep file size manageable
+# Accept the log file path as a command-line argument
+if len(sys.argv) < 2:
+    print("Usage: ./log_stats.py <output_file_path>")
+    sys.exit(1)
+
+LOG_FILE = sys.argv[1]
+INTERVAL_S = 2
 
 header = f"Timestamp,CPU_Freq_MHz,Vcore_V,CPU_Temp_C,MB_Temp_C,Package_Power_W,CPU_Fan_RPM\n"
-with open(LOG_FILE, "w") as f:
-    f.write(header)
+try:
+    with open(LOG_FILE, "w") as f:
+        f.write(header)
+except IOError as e:
+    print(f"Error: Could not write to log file {LOG_FILE}. {e}")
+    sys.exit(1)
 
 try:
     while True:
@@ -25,7 +34,7 @@ try:
         cpu_fan = re.search(r"CPU Fan Speed:\s+([\d]+)", sensors_out).group(1) if re.search(r"CPU Fan Speed:\s+([\d]+)", sensors_out) else "N/A"
 
         log_line = f"{timestamp},{cpu_freq},{vcore},{cpu_temp},{mb_temp},{pkg_power},{cpu_fan}\n"
-
+        
         with open(LOG_FILE, "a") as f:
             f.write(log_line)
 

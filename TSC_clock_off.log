@@ -1,0 +1,16 @@
+panchuz@goliat:~$ sudo dmesg|grep -i clock
+[    0.028383] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+[    0.108716] clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 133484873504 ns
+[    0.128731] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x341f1123786, max_idle_ns: 440795261749 ns
+[    0.210740] Measured 194157 cycles TSC warp between CPUs, turning off TSC clock.
+[    0.256788] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.514002] acpi PNP0A03:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI HPX-Type3]
+[    0.534162] PTP clock support registered
+[    0.544737] clocksource: Switched to clocksource hpet
+[    0.555190] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    2.107092] rtc_cmos 00:01: setting system clock to 2025-08-29T12:47:20 UTC (1756471640)
+[    2.185528] Unstable clock detected, switching default tracing clock to "global"
+               If you want to keep using the local clock, then add:
+                 "trace_clock=local"
+[    2.185619] clk: Disabling unused clocks
+panchuz@goliat:~$ 

@@ -1,3 +1,6 @@
+
+non TSC clock boot:
+-------------------
 panchuz@goliat:~$ sudo dmesg|grep -i clock
 [    0.028383] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
 [    0.108716] clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 133484873504 ns
@@ -14,3 +17,24 @@ panchuz@goliat:~$ sudo dmesg|grep -i clock
                  "trace_clock=local"
 [    2.185619] clk: Disabling unused clocks
 panchuz@goliat:~$ 
+
+TSC clock normal boot:
+----------------------
+panchuz@goliat:~$ sudo dmesg -w|grep -i clock
+[sudo] password for panchuz: 
+[    0.034481] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+[    0.120182] clocksource: hpet: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 133484873504 ns
+[    0.140196] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x34203650f8d, max_idle_ns: 440795304071 ns
+[    0.344916] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.667321] acpi PNP0A03:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI HPX-Type3]
+[    0.689580] PTP clock support registered
+[    0.700229] clocksource: Switched to clocksource tsc-early
+[    0.709632] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    2.275820] rtc_cmos 00:01: setting system clock to 2025-08-29T15:58:19 UTC (1756483099)
+[    2.285073] sched_clock: Marking stable (2282419901, 1711951)->(2493266900, -209135048)
+[    2.358153] clk: Disabling unused clocks
+[    2.481730] tsc: Refined TSC clocksource calibration: 3616.154 MHz
+[    2.481739] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x341fef56bad, max_idle_ns: 440795219437 ns
+[    2.485926] clocksource: Switched to clocksource tsc
+
+

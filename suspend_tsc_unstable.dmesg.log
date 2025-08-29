@@ -1,0 +1,34 @@
+[ 2089.587138] ACPI: PM: Preparing to enter system sleep state S3
+[ 2089.588218] ACPI: EC: event blocked
+[ 2089.588219] ACPI: EC: EC stopped
+[ 2089.588220] ACPI: PM: Saving platform NVS memory
+[ 2089.588246] Disabling non-boot CPUs ...
+[ 2089.590570] smpboot: CPU 3 is now offline
+[ 2089.592751] smpboot: CPU 2 is now offline
+[ 2089.597459] smpboot: CPU 1 is now offline
+[ 2089.594983] ACPI: PM: Low-level resume complete
+[ 2089.595010] ACPI: EC: EC started
+[ 2089.595012] ACPI: PM: Restoring platform NVS memory
+[ 2089.595034] PCI-DMA: Resuming GART IOMMU
+[ 2089.595036] PCI-DMA: Restoring GART aperture settings
+[ 2089.595044] LVT offset 0 assigned for vector 0x400
+[ 2089.626724] Enabling non-boot CPUs ...
+[ 2089.626764] smpboot: Booting Node 0 Processor 1 APIC 0x11
+[ 2089.641369] TSC synchronization [CPU#0 -> CPU#1]:
+[ 2089.641374] Measured 4562683413 cycles TSC warp between CPUs, turning off TSC clock.
+[ 2089.641385] tsc: Marking TSC unstable due to check_tsc_sync_source failed
+[ 2089.641389] TSC found unstable after boot, most likely due to broken BIOS. Use 'tsc=unstable'.
+[ 2089.641390] sched_clock: Marking unstable (2089642591889, 1554579)<-(2089836349764, -194961117)
+[ 2090.903798] clocksource: Checking clocksource tsc synchronization from CPU 1 to CPUs 0.
+[ 2089.642066] CPU1 is up
+[ 2090.903805] clocksource:         CPUs 0 behind CPU 1 for clocksource tsc.
+[ 2090.903807] clocksource:         CPU 1 check durations 1878ns - 1878ns for clocksource tsc.
+[ 2089.648146] smpboot: Booting Node 0 Processor 2 APIC 0x12
+[ 2090.921352] CPU2 is up
+[ 2090.921363] clocksource: Switched to clocksource hpet
+[ 2090.921361] smpboot: Booting Node 0 Processor 3 APIC 0x13
+[ 2090.921390] CPU3 is up
+[ 2090.921390] ACPI: PM: Waking up from system sleep state S3
+[ 2090.921390] ACPI: EC: interrupt unblocked
+[ 2090.921390] ACPI: EC: event unblocked
+[ 2090.921390] xhci_hcd 0000:03:00.0: xHC error in resume, USBSTS 0x401, Reinit

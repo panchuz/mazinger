@@ -10,8 +10,8 @@ Before=graphical.target multi-user.target
 
 [Service]
 Type=oneshot
-# The path to our script
-ExecStart=/usr/local/sbin/amdmsrt.sh
+# The path to our scriptK
+ExecStart=/usr/local/sbin/set_pstates.sh
 # Remain after exit so the script doesn't get killed
 RemainAfterExit=no
 # Run with root privileges
